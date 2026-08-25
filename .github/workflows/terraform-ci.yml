@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  TF_VERSION: 1.6.0
+  TF_VERSION: 1.10.0
   WORKING_DIR: terraform/environments/development
 
 jobs:
@@ -38,7 +38,7 @@ jobs:
       
       - name: ⚙️ Init
         working-directory: ${{ env.WORKING_DIR }}
-        run: terraform init
+        run: terraform init -upgrade
       
       - name: ✅ Validate
         working-directory: ${{ env.WORKING_DIR }}
