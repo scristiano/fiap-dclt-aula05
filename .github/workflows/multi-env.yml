@@ -29,7 +29,7 @@ jobs:
         working-directory: terraform/environments/development
         run: |
           terraform init
-          terraform apply -auto-approve
+          terraform destroy -auto-approve
 
   deploy-staging:
     name: 🧪 Staging  
@@ -55,4 +55,4 @@ jobs:
         working-directory: terraform/environments/staging
         run: |
           terraform init
-          terraform apply -auto-approve
+          terraform destroy -auto-approve
