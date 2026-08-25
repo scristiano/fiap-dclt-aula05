@@ -16,7 +16,7 @@ jobs:
       - name: 🔧 Setup Terraform
         uses: hashicorp/setup-terraform@v3
         with:
-          terraform_version: 1.6.0
+          terraform_version: 1.10.0
       
       - name: 🔑 Configure AWS
         uses: aws-actions/configure-aws-credentials@v4
@@ -38,7 +38,7 @@ jobs:
       
       - name: ⚙️ Init
         working-directory: terraform/environments/modules
-        run: terraform init
+        run: terraform init -upgrade
       
       - name: 📋 Plan
         working-directory: terraform/environments/modules
