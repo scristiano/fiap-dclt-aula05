@@ -50,7 +50,9 @@ jobs:
       
       - name: 🚀 Apply
         working-directory: ${{ env.WORKING_DIR }}
-        run: terraform apply -auto-approve tfplan
+        # run: terraform apply -auto-approve tfplan
+        run: terraform destroy -auto-approve
+        
       
       - name: 📊 Output
         working-directory: ${{ env.WORKING_DIR }}

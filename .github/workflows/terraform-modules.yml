@@ -46,4 +46,5 @@ jobs:
       
       - name: 🚀 Apply
         working-directory: terraform/environments/modules
-        run: terraform apply -auto-approve tfplan
+        # run: terraform apply -auto-approve tfplan
+        run: terraform destroy -auto-approve
